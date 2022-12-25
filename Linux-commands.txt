@@ -1,0 +1,66 @@
+ls -----------> It allows you to list the contents of the directory you want (the current directory by default), including files and other nested directories.
+pwd ----------> The pwd command stands for “print working directory,” and it outputs the absolute path of the directory you’re in.
+cd -----------> It refers to “change directory” and, as its name suggests, switches you to the directory you’re trying to access.
+cp -----------> "COPY" To use the cp command, just type it along with the source and destination files: cp file_to_copy.txt new_file.txt
+mv -----------> You use the mv command to move (or rename) files and directories through your file system.
+rm -----------> You can use the rm command to remove files and empty directories.
+rm -r --------> You can use the rm -r command to remove every directories.
+mkdir --------> To create folders in the shell, you use the mkdir command. 
+touch --------> we use "touch" to create new empty files.
+man ----------> It displays the manual page of any other command (as long as it has one).
+chmod --------> The chmod command lets you change the mode of a file (permissions) quickly. It has a lot of options available with it. The basic permissions a file can have are:r (read),
+                w (write), x (execute).
+exit ---------> he exit command does exactly what its name suggests: With it, you can end a shell session and, in most cases, automatically close the terminal you’re using.
+sudo ---------> This command stands for “superuser do,” and it lets you act as a superuser or root user while you’re running a specific command.
+shut down ----> As you may guess, the shutdown command lets you power off your machine. However, it also can be used to halt and reboot it.
+htop ---------> "htop" is an interactive process viewer that lets you manage your machine’s resources directly from the terminal.
+unzip --------> The "unzip" command allows you to extract the content of a .zip file from the terminal.
+echo ---------> The "echo" command displays defined text in the terminal — it’s that simple.
+cat ----------> "Cat", short for “concatenate,” lets you create, view, and concatenate files directly from the terminal.
+		It’s mainly used to preview a file without opening a graphical text editor.
+ps -----------> With "ps", you can take a look at the processes your current shell session is running. 
+		It prints useful information about the programs you’re running, like process ID, TTY (TeleTYpewriter), time, and command name.
+kill ---------> It’s annoying when a program is unresponsive, and you can’t close it by any means. Fortunately, the "kill" command solves this kind of problem.
+ping ---------> "ping" is the most popular networking terminal utility used to test network connectivity. 
+		"ping" has a ton of options, but in most cases, you’ll use it to request a domain or IP address.
+vim ----------> "vim" is a free and open source terminal text editor that’s in used since the ’90s. It lets you edit plain text files using efficient keybindings.
+history ------> If you’re struggling to remember a command, "history" comes in handy. This command displays an enumerated list with the commands you’ve used in the past.
+passwd -------> "passwd" allows you to change the passwords of user accounts. First, it prompts you to enter your current password, then asks you for a new password and confirmation.
+		Be careful while using it — you don’t want to mess up your user password!
+which --------> The "which" command outputs the full path of shell commands. If it can’t recognize the given command, it’ll throw an error.
+shred --------> If you ever wanted a file to be almost impossible to recover, "shred" can help you with this task. 
+		This command overrides the contents of a file repeatedly, and as a result, the given file becomes extremely difficult to recover.
+less ---------> "less" (opposite of more) is a program that lets you inspect files backward and forward:
+tail ---------> Similar to "cat", "tail" prints the contents of a file with one major caveat: It only outputs the last lines. 
+		By default, it prints the last 10 lines, but you can modify that number with -n.
+head ---------> This one is complementary to the "tail" command. "head" outputs the first 10 lines of a text file, 
+		but you can set any number of lines you want to display with the -n flag.
+grep ---------> "Grep" is one of the most powerful utilities for working with text files. It searches for lines that match a regular expression and print them.
+whoami -------> The "whoami" command (short for “who am i”) displays the username currently in use.
+whatis -------> "whatis" prints a single-line description of any other command, making it a helpful reference.
+wc -----------> "Wc" stands for “word count,” and as the name suggests, it returns the number of words in a text file.
+uname --------> "uname"(short for “Unix name”) prints the operative system information, which comes in handy when you know your current Linux version.
+neofetch -----> "Neofetch" is a CLI (command-line interface) tool that displays information about your system — like kernel version, 
+		shell, and hardware — next to an ASCII logo of your Linux distro.
+find ---------> The "find" command searches for files in a directory hierarchy based on a regex expression. 
+ipcinfig -----> shows ip.
+useradd ------> used to add a new user to your current Linux machine.
+adduser ------> used to add a new user to your current Linux machine.
+groupadd -----> creates a new group account using the values specified on the command line plus the default values from the system.
+userdel ------> removes the user account identified by the login parameter.
+groupdel -----> used to delete a existing group.
+usermod ------> usermod command or modify user is a command in Linux that is used to change the properties of a user in Linux through the command line.
+chown --------> The chown command allows you to change the user and/or group ownership of a given file, directory, or symbolic link.
+
+No matter which Linux distribution you’re using, it’s likely that you use package managers to install, update, and remove the software you use every day.
+You can access these package managers through the command line, and you’d use one or another depending on the distro your machine is running.
+1. Debian-based (Ubuntu, Linux Mint)
+sudo apt install gimp
+2. Red Hat-based (Fedora, CentOS)
+sudo yum install gimp
+3. Arch-based (Manjaro, Arco Linux)
+sudo pacman -S gimp
+
+
+
+
