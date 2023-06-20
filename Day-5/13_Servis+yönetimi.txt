@@ -1,0 +1,46 @@
+Servis Yönetimi 
+
+Arkaplanda gerçekleşen çalışmalar bütünüdür.
+Mesela OS açılırken arkaplanda MySQL, Firewall, Dosya Senkronizasyon yazılımı gibi servisler çalışmaya başlar.
+ Bazen servislerde sorun çıkabilir. Apache sunucumuz var bir configurasyon yapacağız ve sonra yeniden çalıştırmaya başlayacaksak eğer. Burada bilgisayarı yeniden başlatmak yerine servisi restart etmek daha doğrudur.
+Ya da geçici olarak servisi durdurma ihtiyacımız olursa durdurabiliriz.
+Tabi bunları yapabilmek için en başta servis adını bilmemiz gerekir.
+Bunun için;
+
+ # Tüm servisleri listele
+service --status-all 
+
++ '-lar çalışan servisleri
+- 'ler ise durmuş olan servisleri göstermektedir.
+
+Örnek:
+ufw firewall demektir. Durduralım- Statusünü Kontrol edelim- Yeniden çalıştıralım
+
+İki farklı yöntem vardır. root yetkili olmak lazım.
+
+
+# YÖNTEM 1 
+sudo systemctl status ufw
+
+# Servisi durdur
+sudo systemctl stop ServisAdı
+
+ # Servisi başlat
+sudo systemctl start ServisAdı
+
+ # Servisi yeniden başlat
+sudo systemctl restart ServisAdı
+
+ # Servisi durumunu kontrol et
+sudo systemctl status ServisAdı
+
+
+
+clear
+
+# YÖNTEM 2 
+sudo service ServisAdı stop # Servisi durdur
+sudo service ServisAdı start # Servisi başlat
+sudo service ServisAdı restart # Servisi yeniden başlat
+sudo service ServisAdı status # Servisi durumunu kontrol et
+
