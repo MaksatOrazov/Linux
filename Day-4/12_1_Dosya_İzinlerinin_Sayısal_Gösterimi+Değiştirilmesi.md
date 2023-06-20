@@ -1,0 +1,69 @@
+\#Dosya İzinleri Hesaplama ve Sayısal Gösterimi
+
+-rw-rw-r-- ifadesinde;
+
+-   -\> Dosya demektir
+
+-\> rw- Kullanıcı İzinlerini -\> rw- Grup İzinlerini -\> r-- Herhangibir
+Kullanıcı İzinlerini
+
+        ifade eder.
+
+
+          --r--, -wr-, -ex-
+
+rw- ifadesi -\> 2\^2, 2\^1, 2\^0 = 6 (User)
+
+rw- ifadesi -\> 2\^2, 2\^1, 2\^0 = 6 (Group)
+
+r-- ifadesi -\> 2\^2, 2\^0, 2\^0 = 4 (Everyone)
+
+Dolayısıyla -rw-rw-r-- =\> 664 sayısal gösterimine sahiptir.
+
+Örnekler..
+
+\#İzinleri Değiştirme
+
+./script.sh
+
+chmod -x script.sh
+
+chmod +x script.sh
+
+Örnek: \# tar dosyalarının yazma izinlerini kaldıralım chmod -w \*.tar
+
+Örnek: \# İzinleri sayısal olarak değiştirelim (r=4, w=2, x=1) idi.
+
+Dosyanın sahibi olan kullanıcı rw- =\> 4+2+0 = 6
+
+Dosyanın sahibi olan grup sadece r-- =\> 4+0+0 = 4
+
+Everyone kullancısı hiçbir yetkiye sahip olmasın --- =\> 0+0+0 = 0
+
+Dolayısıyla izinlerin sayısal gösterimi =\> 6 4 0
+
+    chmmod 640 *.tar
+
+Son durumda listele ve sonucu gör!
+
+Örnek:
+
+script.sh dosyası gibi tüm script dosyaları sadece okunabilsin ama
+yazılamasın..
+
+Dosyanın sahibi olan kullanıcı r-x =\> 4+0+1 = 5
+
+Dosyanın sahibi olan grup sadece r-x =\> 4+0+1 = 5
+
+Everyone kullancısı hiçbir yetkiye sahip olmasın r-x =\> 4+0+1 = 5
+
+Dolayısıyla izinlerin sayısal gösterimi =\> 5 5 5
+
+    #chmod 555 *.sh
+
+Son durumda listele ve sonucu gör!
+
+\#Dizinlerde izinleri değiştirmek için -R recursive parametresi
+kullanılır
+
+chmod -R 770 Öğrenciler/
